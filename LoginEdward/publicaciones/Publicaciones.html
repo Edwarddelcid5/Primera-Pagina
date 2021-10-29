@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar seccion</title>
+    <link rel="stylesheet" href="../css/Barralogin.css" />
+    <link rel="stylesheet" href="Imagen.css" />
+    <link rel="stylesheet" href="style.css">
+   
+   
+  </head>
+  <body>
+    <main1>
+      <div class="big-wrapper light">
+        <img src="../img/logo.png" alt="" class="shape" />
+
+        <header>
+          <div class="container">
+            <div class="logo">
+              <img src="../img/logo.png" alt="Logo" />
+              <h3>MascotasEd</h3>
+            </div>
+
+            <div class="links">
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="Publicaciones.html">Publicaciones</a></li>
+                <li><a href="../perfil/Perfil.html">Contacto</a></li>
+                <li><a href="#">Correo</a></li>
+                <li><a href="../Login/Login.php" class="btn">Inicia sesion</a></li>
+              </ul>
+            </div>
+
+            <div class="overlay"></div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+
+        
+
+       <div class="bottom-area">
+          <div class="container">
+            <button class="toggle-btnn">
+              
+            </button>
+          </div>
+
+          <div class="container">
+            <div class="contact-box">
+              <div class="contact-info">
+                <h3 class="title">Crea tu Publicacion</h3>
+                <p class="text">
+               Porfavor brindanos la informacion que se solicita.
+                </p>
+                <div class="information-wrap">
+                  <div class="information">
+    
+                  
+    
+                    <div class="profile-images-card">
+                      <div class="profile-images">
+                        <img src="" id="upload-img">
+                      </div>
+                      <div class="custom-file">
+                      
+                        <label 
+                         
+                        class="btn" for="fileupload"><i class="fas fa-save"></i> Subir Imagen</label> 
+                        
+                        <input type="file" id="fileupload">
+                      </div>
+                    </div>
+                   
+                  </div>
+    
+              
+                </div>
+              </div>
+    
+    
+              
+              <div class="contact-form">
+                <h3 class="title">LLena los Datos de la Publicacion</h3>
+                <div class="row"> 
+                
+                  <input name="Nombre" type="text" class="contact-input" placeholder="Nombre"/>
+    
+    
+                  <input  name="Apellido" type="text" class="contact-input" placeholder=" Apellido"
+                  />
+                </div>
+    
+                <!-- datos  -->
+                <div class="row">
+                  <input type="text" class="contact-input"  placeholder="Numero de telefono" name="Numero" />
+                  <input type="email" class="contact-input" placeholder="Email" name="Correo" />
+                  
+                </div>
+                <div class="row">
+                  <input type="text" class="contact-input" placeholder="Direccion" name="Direccion" /> 
+
+                  <input type="date" class="contact-input" placeholder="fecha" name="fecha"/>
+
+              
+                </div>
+                
+    
+                <div class="row">
+                  <textarea
+               
+                    name="message"
+                    class="contact-input textarea"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+                
+                <a href="../publicaciones/Index.html" class="btn" >  <i class="fas fa-save"></i> Publicar</a>
+                
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main1>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  
+    <script src="../Login/Barra.js"></script> 
+    <script src="../publicaciones/jquery-latest.min.js"></script>
+    <script>
+      $(function(){
+        $("#fileupload").change(function(event) {
+          var x = URL.createObjectURL(event.target.files[0]);
+          $("#upload-img").attr("src",x);
+          console.log(event);
+        });
+      })
+    </script>
+
+  </body>
+</html>
